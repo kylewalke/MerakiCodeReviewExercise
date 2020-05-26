@@ -27,9 +27,11 @@ public class CodeReviewPrompt {
     {
       for (Case c: caseList)
       {
-        assign_Caseowner(c.Id);
-        caseList.add(c);
+        if(t.CaseId == c.Id){
+          t.Status='Completed';
+        }
       }
+      update t;
     }
   }
 
