@@ -27,7 +27,7 @@ public class CodeReviewPrompt {
     {
       for (Case c: caseList)
       {
-        if(t.CaseId == c.Id){
+        if(t.CaseId != null && t.CaseId == c.Id){
           t.Status='Completed';
         }
       }
